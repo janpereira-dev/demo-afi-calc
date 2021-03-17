@@ -47,3 +47,9 @@ Thumbs.db
 
 #Debug
 debug.log
+
+#Angular
+package-lock.json
+
+#Cypress
+cypress/integration/examples/*

@@ -1,13 +1,14 @@
 {
   "name": "demo-afi-calc",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
+    "start": "ng serve -o --live-reload",
+    "build": "ng build –prod",
+    "test": "ng test --code-coverage=true ",
+    "test:coverage": "ng test --code-coverage=true --watch=false",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "./node_modules/.bin/cypress open"
   },
   "private": true,
   "dependencies": {
@@ -30,6 +31,7 @@
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
+    "cypress": "^6.7.1",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.2.0",
