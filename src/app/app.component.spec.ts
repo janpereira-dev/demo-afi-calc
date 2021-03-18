@@ -27,4 +27,13 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app.title).toEqual('AFI calculadora Digital');
   });
+
+  it(`should chance sidebarOpen value in handleLogin`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    app.sidebarOpen = false;
+    app.handleLogin('click');
+    expect(app.sidebarOpen).toEqual(true);
+  });
+
 });

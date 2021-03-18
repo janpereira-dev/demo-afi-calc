@@ -6,16 +6,17 @@
     <button class="navbar-toggler peach-gradient" type="button" aria-expanded="false" aria-label="Toggle navigation" (click)="this.navbarOpen = !this.navbarOpen">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse mx-auto" [ngClass]="{ 'show': navbarOpen }">
-      <ul class="navbar-nav text-center">
+    <div class="collapse navbar-collapse bd-highlight" [ngClass]="{ 'show': navbarOpen }">
+      <ul class="navbar-nav text-center ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/heroes">Inicio</a>
+          <a class="nav-link" routerLink="/heroes">Inicio</a> 
+          <!-- Falta el Active -->
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/heroes">Link</a>
         </li>
-        <li>
-          <button class="btn btn-outline-success" (click)="this.clickLogin.emit(true);">Login</button>
+        <li class="nav-item">
+          <button class="btn btn-outline-success mx-2" (click)="this.clickLogin.emit(true);">Login</button>
         </li>
       </ul>
     </div>
