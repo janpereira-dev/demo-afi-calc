@@ -7,7 +7,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse bd-highlight" [ngClass]="{ 'show': navbarOpen }">
-      <ul class="navbar-nav text-center ms-auto">
+      <ul class="navbar-nav text-center ms-auto" (click)="this.navbarOpen = !this.navbarOpen">
         <li class="nav-item">
           <a class="nav-link" routerLink="/heroes">Inicio</a> 
           <!-- Falta el Active -->

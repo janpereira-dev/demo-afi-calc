@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { BodyComponent } from './atomic/pages/body/body.component';
 import { NavbarComponent } from './atomic/template/navbar/navbar.component';
 import { SidebarComponent } from './atomic/template/sidebar/sidebar.component';
+import { SumadoraComponent } from './atomic/pages/sumadora/sumadora.component';
+import { RestadoraComponent } from './atomic/pages/restadora/restadora.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BodyComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    SumadoraComponent,
+    RestadoraComponent
   ],
   imports: [
     BrowserModule,
