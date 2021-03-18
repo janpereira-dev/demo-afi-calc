@@ -1,5 +1,7 @@
 {
   "name": "demo-afi-calc",
+  "description": "Demo calculator for AFI",
+  "author": "Jan Pereira",
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
