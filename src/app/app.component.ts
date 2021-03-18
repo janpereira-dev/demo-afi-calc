@@ -8,4 +8,9 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 export class AppComponent {
   title = 'AFI calculadora Digital';
+  sidebarOpen = false;
+
+  handleLogin(events: any): any {
+    this.sidebarOpen = !this.sidebarOpen;
+  }
 }
