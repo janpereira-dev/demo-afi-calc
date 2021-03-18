@@ -7,4 +7,11 @@ export const TYPES: Map<string, string> = new Map([
   ['type6', 'Tipo N°6']
 ]);
 
-
+export const TYPES_CALC = [
+  ['sumas', 'Calculadora Sumatoria', ''],
+  ['restas', 'Calculadora Restadora', ''],
+  ['otras', 'Calculadora Financiera', ''],
+  ['otras', 'Calculadora Científica', ''],
+  ['otras', 'Calculadora Programable', ''],
+  ['otras', 'Calculadora Gráfica', '']
+];
