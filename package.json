@@ -1,5 +1,7 @@
 {
   "name": "demo-afi-calc",
+  "description": "Demo calculator for AFI",
+  "author": "Jan Pereira",
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
@@ -50,7 +52,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && ng lint"
     }
   },
   "lint-staged": {
