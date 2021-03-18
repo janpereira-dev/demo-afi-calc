@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { BodyComponent } from './atomic/pages/body/body.component';
 import { NavbarComponent } from './atomic/template/navbar/navbar.component';
 import { SidebarComponent } from './atomic/template/sidebar/sidebar.component';
-import { SumadoraComponent } from './atomic/pages/sumadora/sumadora.component';
-import { RestadoraComponent } from './atomic/pages/restadora/restadora.component';
+import { AdditionComponent } from './atomic/pages/addition/addition.component';
+import { SubtractionComponent } from './atomic/pages/subtraction/subtraction.component';
+import { MultiplicationComponent } from './atomic/pages/multiplication/multiplication.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +16,9 @@ import { RestadoraComponent } from './atomic/pages/restadora/restadora.component
     BodyComponent,
     NavbarComponent,
     SidebarComponent,
-    SumadoraComponent,
-    RestadoraComponent
+    AdditionComponent,
+    SubtractionComponent,
+    MultiplicationComponent
   ],
   imports: [
     BrowserModule,

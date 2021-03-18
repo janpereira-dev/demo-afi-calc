@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SumadoraComponent } from './sumadora.component';
+import { AdditionComponent } from './addition.component';
 
-describe('SumadoraComponent', () => {
-  let component: SumadoraComponent;
-  let fixture: ComponentFixture<SumadoraComponent>;
+describe('AdditionComponent', () => {
+  let component: AdditionComponent;
+  let fixture: ComponentFixture<AdditionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SumadoraComponent ]
+      declarations: [ AdditionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SumadoraComponent);
+    fixture = TestBed.createComponent(AdditionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

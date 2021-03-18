@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RestadoraComponent } from './restadora.component';
+import { MultiplicationComponent } from './multiplication.component';
 
-describe('RestadoraComponent', () => {
-  let component: RestadoraComponent;
-  let fixture: ComponentFixture<RestadoraComponent>;
+describe('MultiplicationComponent', () => {
+  let component: MultiplicationComponent;
+  let fixture: ComponentFixture<MultiplicationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RestadoraComponent ]
+      declarations: [ MultiplicationComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RestadoraComponent);
+    fixture = TestBed.createComponent(MultiplicationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

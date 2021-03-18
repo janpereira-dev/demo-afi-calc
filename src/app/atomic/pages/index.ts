@@ -1,3 +1,4 @@
 export * from './body/body.component';
-export * from './sumadora/sumadora.component';
-export * from './restadora/restadora.component';
+export * from './addition/addition.component';
+export * from './subtraction/subtraction.component';
+export * from './multiplication/multiplication.component';
