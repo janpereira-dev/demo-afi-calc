@@ -1,0 +1,23 @@
+#sidebar-wrapper {
+  min-height: calc( 100vh - 85px);
+  margin-top: 85px;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper form {
+  width: 15rem;
+  padding: 1rem;
+}
+
+.openSidebar {
+   margin-left: 0 !important;
+}

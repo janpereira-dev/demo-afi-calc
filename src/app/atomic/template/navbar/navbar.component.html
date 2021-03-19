@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/heroes">
+    <a class="navbar-brand" routerLink="/home">
       <img src="/assets/img/logo.png" alt="" class="brand-logo">
     </a>
     <button class="navbar-toggler peach-gradient" type="button" aria-expanded="false" aria-label="Toggle navigation" (click)="this.navbarOpen = !this.navbarOpen">
@@ -9,17 +9,16 @@
     <div class="collapse navbar-collapse bd-highlight" [ngClass]="{ 'show': navbarOpen }">
       <ul class="navbar-nav text-center ms-auto" (click)="this.navbarOpen = !this.navbarOpen">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/heroes">Inicio</a> 
-          <!-- Falta el Active -->
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">Inicio</a> 
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/sumas">Sumas</a>
+          <a class="nav-link" routerLink="/sumas" routerLinkActive="active">Sumas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/restas">Restas</a>
+          <a class="nav-link" routerLink="/restas" routerLinkActive="active">Restas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/otras">Otras</a>
+          <a class="nav-link" routerLink="/otras" routerLinkActive="active">Otras</a>
         </li>
         <li class="nav-item">
           <button class="btn btn-outline-success mx-2" (click)="this.clickLogin.emit(true);">Login</button>

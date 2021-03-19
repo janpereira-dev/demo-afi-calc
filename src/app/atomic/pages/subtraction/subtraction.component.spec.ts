@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 
 import { SubtractionComponent } from './subtraction.component';
 
@@ -8,7 +8,6 @@ describe('SubtractionComponent', () => {
   let component: SubtractionComponent;
   let fixture: ComponentFixture<SubtractionComponent>;
   let form: FormBuilder;
-  let el: HTMLElement;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ SubtractionComponent ],
@@ -21,7 +20,12 @@ describe('SubtractionComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SubtractionComponent);
     component = fixture.componentInstance;
-    // form = new FormBuilder();
+    form = new FormBuilder();
+    component.calcForm = form.group({
+      nameForm: [''],
+      firstField: ['', [ Validators.required, Validators.pattern(/^\-?\d+(\.(?=\d))?\d*$/) ] ],
+      secondField: ['', [ Validators.required, Validators.pattern(/^\-?\d+(\.(?=\d))?\d*$/) ] ]
+    });
     fixture.detectChanges();
   });
 
@@ -29,16 +33,17 @@ describe('SubtractionComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('should onSubmit', () => {
-  //   spyOn(component, 'onSubmit');
-  //   el = fixture.debugElement.query(By.css('button')).nativeElement;
-  //   el.click();
-  //   expect(component.onSubmit).toHaveBeenCalledTimes(1);
-  // });
-
   it('should set submitted to true', () => {
     component.onSubmit();
     expect(component.onSubmit).toBeTruthy();
   });
-  
+
+  it('should return form control by field name', () => {
+    expect(component.getNumberFC('firstField')).toEqual(component.calcForm.get('firstField') as FormControl);
+  });
+
+  it('should return result to Subtraction', () => {
+    expect(component.subtraction(5, 1)).toEqual(4);
+  });
+
 });
