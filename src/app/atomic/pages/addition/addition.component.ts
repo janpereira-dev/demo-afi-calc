@@ -10,8 +10,8 @@ export class AdditionComponent {
 
   calcForm = this.fb.group({
     nameForm: [''],
-    firstField: ['', Validators.required],
-    secondField: ['', Validators.required]
+    firstField: ['', [ Validators.required, Validators.pattern(/^\-?\d+(\.(?=\d))?\d*$/) ] ],
+    secondField: ['', [ Validators.required, Validators.pattern(/^\-?\d+(\.(?=\d))?\d*$/) ] ]
   });
 
   constructor(private fb: FormBuilder) { }
