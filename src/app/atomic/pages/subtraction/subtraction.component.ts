@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Validators, FormBuilder } from '@angular/forms';
+import { Validators, FormBuilder, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-pa-subtraction',
@@ -21,7 +21,11 @@ export class SubtractionComponent {
   }
 
   subtraction(x: number, y: number): number{
-    return x - y;
+    return Number(x) - Number(y);
+  }
+
+  getNumberFC(ctrl: string): FormControl {
+    return this.calcForm.get(ctrl) as FormControl;
   }
 
 }

@@ -10,6 +10,7 @@ import { SidebarComponent } from './atomic/template/sidebar/sidebar.component';
 import { AdditionComponent } from './atomic/pages/addition/addition.component';
 import { SubtractionComponent } from './atomic/pages/subtraction/subtraction.component';
 import { MultiplicationComponent } from './atomic/pages/multiplication/multiplication.component';
+import { OnlyNumbersDirective } from './atomic/directives/only-numbers/only-numbers.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MultiplicationComponent } from './atomic/pages/multiplication/multiplic
     SidebarComponent,
     AdditionComponent,
     SubtractionComponent,
-    MultiplicationComponent
+    MultiplicationComponent,
+    OnlyNumbersDirective
   ],
   imports: [
     BrowserModule,

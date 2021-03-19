@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Validators, FormBuilder } from '@angular/forms';
+import { Validators, FormBuilder, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-pa-multiplication',
@@ -10,8 +10,8 @@ export class MultiplicationComponent {
 
   calcForm = this.fb.group({
     nameForm: [''],
-    firstField: ['', Validators.required],
-    secondField: ['', Validators.required]
+    firstField: ['', [ Validators.required, Validators.pattern(/^\-?\d+(\.(?=\d))?\d*$/) ] ],
+    secondField: ['', [ Validators.required, Validators.pattern(/^\-?\d+(\.(?=\d))?\d*$/) ] ]
   });
 
   constructor(private fb: FormBuilder) { }
@@ -21,7 +21,11 @@ export class MultiplicationComponent {
   }
 
   multiplication(x: number, y: number): number{
-    return x * y;
+    return Number(x) * Number(y);
+  }
+
+  getNumberFC(ctrl: string): FormControl {
+    return this.calcForm.get(ctrl) as FormControl;
   }
 
 }
