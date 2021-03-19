@@ -1,6 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 import { SidebarComponent } from './sidebar.component';
 
@@ -11,6 +12,7 @@ describe('SidebarComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ SidebarComponent ],
+      imports: [ToastrModule.forRoot()],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
       providers: [FormBuilder]
     })
