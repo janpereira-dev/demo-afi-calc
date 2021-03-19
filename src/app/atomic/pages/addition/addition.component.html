@@ -13,12 +13,12 @@
             <input type="text" class="form-control" id="nameForm" formControlName="nameForm" maxlength="20">
           </div>
           <div class="mb-3">
-            <label for="firstField" class="form-label">1° Valor:</label>
+            <label for="firstField" class="form-label">1° Valor: (<span class="link-danger">*</span>)</label>
             <input type="number" class="form-control" id="firstField" formControlName="firstField" required maxlength="10" appOnlyNumbers>
             <div *ngIf="getNumberFC('firstField').hasError('pattern')" class="alert alert-danger px-3 py-1" role="alert"> ¡Por favor, usar solo números! </div>
           </div>
           <div class="mb-3">
-            <label for="secondField" class="form-label">2° Valor:</label>
+            <label for="secondField" class="form-label">2° Valor: (<span class="link-danger">*</span>)</label>
             <input type="number" class="form-control" id="secondField" formControlName="secondField" required maxlength="10" appOnlyNumbers>
             <div *ngIf="getNumberFC('secondField').hasError('pattern')" class="alert alert-danger px-3 py-1" role="alert"> ¡Por favor, usar solo números! </div>
           </div>

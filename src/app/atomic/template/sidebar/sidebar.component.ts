@@ -19,7 +19,7 @@ export class SidebarComponent {
 
   onSubmit(): void {
     console.warn(this.login.value);
-    this.toastr.success('Hello world!', 'Toastr fun!');
+    this.toastr.success(`Login con correo: ${this.login.value.emailForm}.`, '¡Gracias por el login!');
   }
 
   handleSideClose(): void {

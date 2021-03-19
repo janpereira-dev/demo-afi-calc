@@ -1,16 +1,17 @@
 <div class="bg-light border-right" id="sidebar-wrapper" [class.openSidebar]="open">
   <div class="sidebar-heading text-center">Acceso de usuario</div>
-  <form [formGroup]="login" (ngSubmit)="onSubmit()">
+  <form [formGroup]="login" (ngSubmit)="$event.preventDefault()">
     <div class="mb-3">
-      <label for="emailForm" class="form-label">Correo electrónico:</label>
+      <label for="emailForm" class="form-label">Correo electrónico: (<span class="link-danger">*</span>)</label>
       <input type="email" class="form-control" id="emailForm" formControlName="emailForm">
     </div>
     <div class="mb-3">
-      <label for="passForm" class="form-label">Contraseña:</label>
+      <label for="passForm" class="form-label">Contraseña: (<span class="link-danger">*</span>)</label>
       <input type="password" class="form-control" id="passForm" formControlName="passForm">
     </div>
     <div class="text-center">
-      &nbsp;&nbsp;<button class="btn btn-oragen" [disabled]="!login.valid">Iniciar</button>&nbsp;&nbsp;<button class="btn btn-oragen" (click)="handleSideClose()">Cerrar</button>&nbsp;&nbsp;
+      &nbsp;&nbsp;<button class="btn btn-oragen" [disabled]="!login.valid" (click)="onSubmit()">Iniciar</button>&nbsp;
+      &nbsp;<button class="btn btn-oragen" (click)="handleSideClose()">Cerrar</button>&nbsp;&nbsp;
     </div>
   </form>
 </div>
