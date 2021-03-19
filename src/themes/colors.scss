@@ -1,4 +1,28 @@
 $color_neutral: #8b8b92;
 $color_orange: #DB572E;
 $color_shadow: rgba(0,0,0,0.25);
+$padding_top: 95px;
 
+.btn-oragen { 
+  background: linear-gradient(90deg, rgba(252,98,98,1) 0%, rgba(219,87,46,1) 100%);
+  border-color: transparent;
+  color: #fff;
+}
+
+.btn-oragen:hover { 
+  background: #fff;
+  border-color: $color_orange;
+  color: $color_orange;
+}
+
+.btn-outline-oragen { 
+  background: #fff;
+  border-color: $color_orange;
+  color: $color_orange;
+}
+
+.btn-outline-oragen:hover { 
+  background: linear-gradient(90deg, rgba(252,98,98,1) 0%, rgba(219,87,46,1) 100%);
+  border-color: transparent;
+  color: #fff;
+}

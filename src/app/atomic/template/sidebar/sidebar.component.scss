@@ -1,6 +1,8 @@
+@import "src/themes/colors";
+
 #sidebar-wrapper {
-  min-height: calc( 100vh - 85px);
-  margin-top: 85px;
+  min-height: calc( 100vh - 80px );
+  margin-top: 80px;
   margin-left: -15rem;
   -webkit-transition: margin .25s ease-out;
   -moz-transition: margin .25s ease-out;
@@ -19,5 +21,6 @@
 }
 
 .openSidebar {
-   margin-left: 0 !important;
+  margin-left: 0 !important;
 }
+

@@ -13,3 +13,8 @@
 .peach-gradient {
   background: linear-gradient(40deg,#ffd86f,#fc6262) !important;
 }
+
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .nav-link.active {
+  color: #000;
+  font-weight: 700;
+}
