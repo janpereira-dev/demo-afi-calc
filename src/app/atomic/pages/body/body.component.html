@@ -1,27 +1,26 @@
 <section class="section__top">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-12 col-sm-9 p-3">
-        <div class="card mb-3">
-          <div class="row g-0">
-            <div class="col-lg-4 align-self-center">
-              <img src="https://placekitten.com/1000/1200" alt="" class="img-fluid p-2 rounded">
-            </div>
-            <div class="col-lg-8 align-self-center">
-              <div class="card-body">
-                <h3 class="card-title text-center">Toda buena página, requiere un buen inicio.</h3>
-                <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="col-12 col-sm-9 p-3 text-center">
+        <h1 class="fw-bold">Simuladores</h1>
+        <p>Si estás pensando en hacer una calculo, ponemos a tu disposición nuestro simulador de operaciones para que puedas elegir la que mejor se adapta a tus necesidades.</p>
+        <hr>
       </div>
     </div>
   </div>
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-12 col-sm-6 col-md-3 p-3 text-center" *ngFor="let opt of buttons">
-        <button type="button" class="btn btn-outline-oragen mx-auto" [routerLink]="['/' + opt[0]]">{{ opt[1] }}</button>
+
+      <div class="col-10 col-sm-5 col-md-4 col-lg-3 p-3 text-center" *ngFor="let opt of buttons">
+        <div class="card">
+          <img src="{{ opt[2] }}" class="card-img-top" alt="{{ opt[1] }}">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">{{ opt[1] }}</h5>
+            <p class="card-text">Some quick example text to build on the card.</p>
+            <a  [routerLink]="['/' + opt[0]]" class="btn btn-outline-oragen">{{ opt[1] }}</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

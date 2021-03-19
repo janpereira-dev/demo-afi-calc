@@ -8,10 +8,10 @@ export const TYPES: Map<string, string> = new Map([
 ]);
 
 export const TYPES_CALC = [
-  ['sumas', 'Calculadora Sumatoria', ''],
-  ['restas', 'Calculadora Restadora', ''],
-  ['otras', 'Calculadora Financiera', ''],
-  ['otras', 'Calculadora Científica', ''],
-  ['otras', 'Calculadora Programable', ''],
-  ['otras', 'Calculadora Gráfica', '']
+  ['sumas', 'Sumar', 'https://via.placeholder.com/500x250'],
+  ['restas', 'Restar', 'https://via.placeholder.com/500x250'],
+  ['otras', 'Multiplicar', 'https://via.placeholder.com/500x250'],
+  ['otras', 'Calculadora Científica', 'https://via.placeholder.com/500x250'],
+  ['otras', 'Calculadora Programable', 'https://via.placeholder.com/500x250'],
+  ['otras', 'Calculadora Gráfica', 'https://via.placeholder.com/500x250']
 ];

@@ -22,8 +22,8 @@ describe('SidebarComponent', () => {
     component = fixture.componentInstance;
     form = new FormBuilder();
     component.login = form.group({
-      firstField: ['', Validators.required ],
-      secondField: ['', Validators.required ]
+      emailForm: ['', Validators.required ],
+      passForm: ['', Validators.required ]
     });
     fixture.detectChanges();
   });
