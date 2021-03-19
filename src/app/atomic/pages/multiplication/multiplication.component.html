@@ -2,7 +2,40 @@
   <div class="container">
     <div class="row">
       <div class="col text-center">
-        <p>OTRAS</p>
+        <h2>Calculadora general</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-9 col-lg-6">
+        <form [formGroup]="calcForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="nameForm" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nameForm" formControlName="nameForm" maxlength="20">
+          </div>
+          <div class="mb-3">
+            <label for="firstField" class="form-label">1° Valor:</label>
+            <input type="text" class="form-control" id="firstField" formControlName="firstField" required maxlength="10">
+          </div>
+          <div class="mb-3">
+            <label for="secondField" class="form-label">2° Valor:</label>
+            <input type="text" class="form-control" id="secondField" formControlName="secondField" required maxlength="10">
+          </div>
+          <div class="col-12 text-center">
+            <button class="btn btn-primary" type="submit" [disabled]="!calcForm.valid">Multiplicar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-9 col-lg-6 p-4">
+        <div class="alert alert-success text-center" role="alert" *ngIf="calcForm.valid">
+          <span *ngIf="calcForm.value.nameForm">Sr@. {{ calcForm.value.nameForm }},</span> la suma entre {{ calcForm.value.firstField }} x {{ calcForm.value.secondField }} = <strong>[{{ multiplication(calcForm.value.firstField, calcForm.value.secondField) }}]</strong>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <button type="button" class="btn btn-outline-primary mx-auto" routerLink="/home">Regresar</button>
       </div>
     </div>
   </div>
